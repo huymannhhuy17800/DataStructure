@@ -62,6 +62,31 @@ public class LinkedList {
         length -- ;
     }
 
+    public Node get (int index) {
+        if(index < 0 || index >= length){
+            System.out.println("Index OUT OF BOUND");
+            return null;
+        }
+        var temp = head ;
+        for(var i = 0 ; i < index ; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    public boolean set (int index, int value) {
+        if(index < 0 || index >= length ) {
+            System.out.println("Index OUT OF BOUND");
+            return false;
+        }
+        var temp = get(index);
+        if(temp == null) {
+            return false;
+        }
+        temp.value = value;
+        return true;
+    }
+
     public void prepend(int value) {
         var newNode = new Node(value);
         if(length == 0) {

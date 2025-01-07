@@ -1,4 +1,5 @@
 import data.LinkedList;
+import units.Node;
 
 public class Main {
 
@@ -33,6 +34,12 @@ public class Main {
         newLL.remove(6);
 
         newLL.reverse();
+
+        Node get = newLL.get(6);
+        System.out.println(get.value);
+
+        newLL.set(6,-69);
+
         newLL.print();
     }
 }
