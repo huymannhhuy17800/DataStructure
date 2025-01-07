@@ -35,10 +35,14 @@ public class Main {
 
         newLL.reverse();
 
-        Node get = newLL.get(6);
-        System.out.println(get.value);
+        newLL.append(100);
+//        Node get = newLL.get(6);
+//        System.out.println(get.value);
 
         newLL.set(6,-69);
+
+        Node middleNode = newLL.findMiddleNode();
+        System.out.println(middleNode.value);
 
         newLL.print();
     }

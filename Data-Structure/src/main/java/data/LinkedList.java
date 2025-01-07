@@ -166,6 +166,24 @@ public class LinkedList {
         }
     }
 
+    public Node findMiddleNode() {
+        if(head == null) {
+            return null;
+        }
+        // Apply two pointers that one is fast x 2 than other
+        var tortoise = head;
+        var hare = head.next;
+
+        while(hare != null){
+            hare = hare.next;
+            tortoise = tortoise.next;
+            if(hare != null) {
+                hare = hare.next;
+            }
+        }
+        return tortoise;
+    }
+
     public void print(){
         var temp = head;
         while(temp != null ){
