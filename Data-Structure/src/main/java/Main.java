@@ -8,7 +8,13 @@ public class Main {
         LinkedList newLL = new LinkedList(0);
 
         newLL.append(1);
+        newLL.append(1);
+        newLL.append(1);
         newLL.append(2);
+        newLL.append(3);
+        newLL.append(3);
+        newLL.append(3);
+        newLL.append(3);
         newLL.append(3);
 
 //        newLL.removeLast();
@@ -43,6 +49,8 @@ public class Main {
 
         Node middleNode = newLL.findMiddleNode();
         System.out.println(middleNode.value);
+
+        newLL.removeDuplicates();
 
         newLL.print();
     }

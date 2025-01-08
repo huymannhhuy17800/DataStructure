@@ -2,6 +2,9 @@ package data;
 
 import units.Node;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LinkedList {
 
     private Node head;
@@ -182,6 +185,51 @@ public class LinkedList {
             }
         }
         return tortoise;
+    }
+
+    public boolean hasLoop() {
+        var tortoise = head ;
+        var hare = head.next;
+
+        while(hare != null) {
+            hare = hare.next;
+            tortoise = tortoise.next;
+            if(hare != null ){
+                hare = hare.next;
+            }
+            if(tortoise == hare){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void removeDuplicates() {
+        if(head == null) {
+            return ;
+        }
+        var current = head;
+        // previous node of current
+        Node pre = null;
+        // next node of current
+        Node nex = null;
+        while(current != null) {
+            pre = current;
+            nex = current.next;
+            // go through the list to find any Node that value is equal to CURRENT
+            while(nex != null) {
+                if(current.value == nex.value){
+                    // Skip duplicates  node by setting existed node next value to NEX next value
+                    pre.next = nex.next;
+                    length --;
+                }else {
+                    // Point PRE to NEX node and continues go to next node
+                    pre = nex;
+                }
+                nex = nex.next;
+            }
+            current = current.next;
+        }
     }
 
     public void print(){
