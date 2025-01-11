@@ -240,4 +240,5 @@ public class LinkedList {
         }
         System.out.println("\nLength: " + length);
     }
+
 }
