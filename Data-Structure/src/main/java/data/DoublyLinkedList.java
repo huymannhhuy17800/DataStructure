@@ -57,8 +57,58 @@ public class DoublyLinkedList {
     }
 
     public void removeFirst() {
-
+        if(length == 0) {
+            return ;
+        }
+        var temp = head;
+        head.pre = null;
+        head = temp.next;
+        temp.next = null;
+        length -- ;
     }
+
+    public DNode get(int index) {
+        if(index < 0 || index >= length) {
+            return null;
+        }
+        var temp = head;
+        for(var i = 0 ; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    public void set(int index, int value) {
+        var temp = this.get(index);
+        if(temp == null) {
+            return ;
+        }
+        temp.value = value;
+    }
+
+    public void insert(int index, int value){
+        if(index < 0 || index > length) {
+            return;
+        }
+        if(index == 0) {
+            this.prepend(value);
+        }
+        if(index == length){
+            this.append(value);
+        }
+        DNode newNode = new DNode(value);
+        var temp = head;
+        for(var i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        newNode.pre = temp;
+        newNode.next = temp.next;
+        temp.next.pre = newNode;
+        temp.next = newNode;
+        length++;
+    }
+
+
     public void print () {
         var temp = head;
         while(temp != null) {

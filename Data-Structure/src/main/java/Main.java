@@ -2,6 +2,8 @@ import data.DoublyLinkedList;
 import data.LinkedList;
 import units.Node;
 
+import java.awt.desktop.SystemSleepEvent;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -63,8 +65,13 @@ public class Main {
         newDLL.append(3);
         newDLL.removeLast();
         newDLL.append(9);
-
-
+//        newDLL.removeFirst();
+//        newDLL.removeFirst();
+//        newDLL.removeFirst();
+//        newDLL.removeFirst();
+        //newDLL.removeLast();
+           // System.out.println(newDLL.get(-11).value);
+            newDLL.insert(2,69);
         newDLL.printAll();
 
     }
