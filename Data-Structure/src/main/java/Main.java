@@ -1,8 +1,4 @@
-import data.DoublyLinkedList;
-import data.LinkedList;
-import units.Node;
-
-import java.awt.desktop.SystemSleepEvent;
+import stack.Stack;
 
 public class Main {
 
@@ -58,21 +54,29 @@ public class Main {
 //        newLL.print();
 
         // Doubly Linked List
-        DoublyLinkedList newDLL = new DoublyLinkedList(0) ;
+//        DoublyLinkedList newDLL = new DoublyLinkedList(0) ;
+//
+//        newDLL.append(1);
+//        newDLL.append(2);
+//        newDLL.append(3);
+//        newDLL.removeLast();
+//        newDLL.append(9);
+////        newDLL.removeFirst();
+////        newDLL.removeFirst();
+////        newDLL.removeFirst();
+////        newDLL.removeFirst();
+//        //newDLL.removeLast();
+//           // System.out.println(newDLL.get(-11).value);
+//            newDLL.insert(2,69);
+//        newDLL.printAll();
 
-        newDLL.append(1);
-        newDLL.append(2);
-        newDLL.append(3);
-        newDLL.removeLast();
-        newDLL.append(9);
-//        newDLL.removeFirst();
-//        newDLL.removeFirst();
-//        newDLL.removeFirst();
-//        newDLL.removeFirst();
-        //newDLL.removeLast();
-           // System.out.println(newDLL.get(-11).value);
-            newDLL.insert(2,69);
-        newDLL.printAll();
+
+        // Stack
+        Stack stack = new Stack(0);
+        stack.push(1);
+        stack.push(2);
+        stack.pop();
+        stack.print();
 
     }
 }

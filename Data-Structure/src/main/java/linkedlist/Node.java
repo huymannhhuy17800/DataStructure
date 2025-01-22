@@ -1,4 +1,5 @@
-package units;
+package linkedlist;
+
 
 public class Node {
     public int value;

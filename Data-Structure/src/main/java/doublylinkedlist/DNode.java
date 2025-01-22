@@ -1,4 +1,4 @@
-package units;
+package doublylinkedlist;
 
 public class DNode {
     public int value ;

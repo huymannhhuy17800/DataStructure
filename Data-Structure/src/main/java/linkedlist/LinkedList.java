@@ -1,9 +1,4 @@
-package data;
-
-import units.Node;
-
-import java.util.HashSet;
-import java.util.Set;
+package linkedlist;
 
 public class LinkedList {
 

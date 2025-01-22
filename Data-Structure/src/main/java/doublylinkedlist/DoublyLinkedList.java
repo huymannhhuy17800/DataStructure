@@ -1,6 +1,4 @@
-package data;
-
-import units.DNode;
+package doublylinkedlist;
 
 public class DoublyLinkedList {
     private DNode head;
