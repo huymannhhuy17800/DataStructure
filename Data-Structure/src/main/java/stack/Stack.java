@@ -42,12 +42,20 @@ public class Stack {
         }
         var temp = top.next;
         Node next = null;
+        for(var i = 0; i < height ; i ++) {
+            top.next = next;
+            next = top;
+            top = temp;
+            if(temp.next != null){
+                temp = temp.next;
+            }
+        }
 
     }
     public void print() {
         var temp = top;
         while(temp != null) {
-            System.out.println(temp.value);
+            System.out.print(temp.value + "-> ");
             temp = temp.next;
         }
     }

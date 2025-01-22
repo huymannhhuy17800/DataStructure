@@ -75,8 +75,12 @@ public class Main {
         Stack stack = new Stack(0);
         stack.push(1);
         stack.push(2);
+        stack.push(3);
+        stack.push(4);
         stack.pop();
         stack.print();
-
+        stack.reverse();
+        System.out.println("\n--------------");
+        stack.print();
     }
 }
